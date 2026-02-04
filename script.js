@@ -58,21 +58,11 @@ function playgame() {
             humanscore++;
     }else console.log("Computer wins this round!");
             computerscore++;
-    }
-for (let round = 1; round <= 5; round++) {
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
-    console.log(`Round ${round}:`);
-    playRound(humanChoice, computerChoice);
-    console.log(`Score - You: ${humanscore}, Computer: ${computerscore}`);
-}if (humanscore > computerscore) {
-    console.log("Congratulations! You won the game!");
-} else if (computerscore > humanscore) {
-    console.log("Computer wins the game! Better luck next time.");
-}else {
-    console.log("The game is a tie!");
 }
-playgame();
-function capitalize(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-}
+const buttons = document.getElementById('button');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const humanChoice = button.id;
+        const computerChoice = getComputerChoice();
+    });
+});
