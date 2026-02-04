@@ -27,8 +27,11 @@ function playRound(humanChoice, computerChoice) {
         console.log(`You win! ${capitalize(humanChoice)} beats ${computerChoice}`)
         console.log("You win!");
         return "You win!";
+        {capitalize(humanChoice)} {capitalize(computerChoice)};
     } else {
+        {capitalize(computerChoice)} {capitalize(humanChoice)};
         computerScore++;
         console.log("Computer wins!");
         return "Computer wins!";
     }
+}
