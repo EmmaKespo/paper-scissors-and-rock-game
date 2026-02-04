@@ -59,3 +59,10 @@ function playgame() {
     }else console.log("Computer wins this round!");
             computerscore++;
 }
+const buttons = document.getElementById('button');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const humanChoice = button.id;
+        const computerChoice = getComputerChoice();
+    });
+});
